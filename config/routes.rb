@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  # Routes for the Rest_tag resource:
+  # CREATE
+  get "/rest_tags/new", :controller => "rest_tags", :action => "new"
+  post "/create_rest_tag", :controller => "rest_tags", :action => "create"
+
+  # READ
+  get "/rest_tags", :controller => "rest_tags", :action => "index"
+  get "/rest_tags/:id", :controller => "rest_tags", :action => "show"
+
+  # UPDATE
+  get "/rest_tags/:id/edit", :controller => "rest_tags", :action => "edit"
+  post "/update_rest_tag/:id", :controller => "rest_tags", :action => "update"
+
+  # DELETE
+  get "/delete_rest_tag/:id", :controller => "rest_tags", :action => "destroy"
+  #------------------------------
+
   # Routes for the Neighborhood resource:
   # CREATE
   get "/neighborhoods/new", :controller => "neighborhoods", :action => "new"
